@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>
+			Images/slide1.jpg
+		</ImageUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>
+			Images/slide2.jpg
+		</ImageUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>
+			Images/slide3.jpg
+		</ImageUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>
+			Images/slide4.jpg
+		</ImageUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>
+			Images/slide5.jpg
+		</ImageUrl>
+	</Ad>
+</Advertisements>
