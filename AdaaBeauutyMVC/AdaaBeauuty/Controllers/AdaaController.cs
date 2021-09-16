@@ -17,27 +17,30 @@ namespace AdaaBeauuty.Controllers
         {
             repo = new ProductRepository(new Adaa());
         }
-        
+
         // GET: Adaa
-        public string Index()
+        public ActionResult Index()
         {
-            string str = "";
+            //string str = "";
             var prd = repo.GetProduct();
-            //var data = new List<AdaaBeauuty.Models.Product>();
+            var data = new List<AdaaBeauuty.Models.Product>();
             foreach (var p in prd)
             {
-                str += p.PrdName + " ";
-                //data.Add(Mapper.Map(p));
+                //str += p.PrdName + " ";
+                data.Add(Mapper.Map(p));
             }
-            return str;
+            return View(data);
         }
 
-        public string GetProductById(int id)
+        public ActionResult GetProductById(int id)
         {
-            string s = "";
+            //string s = "";
             var prd = repo.GetProductById(id);
-            s = prd.PrdName;
-            return s;
+            //s = prd.PrdName;
+            return View(Mapper.Map(prd));
         }
+
+
+
     }
 }

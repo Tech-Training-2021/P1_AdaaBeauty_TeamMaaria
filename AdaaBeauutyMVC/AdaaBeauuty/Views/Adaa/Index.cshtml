@@ -1,50 +1,31 @@
-﻿@model Data.Entities.product
+﻿@model dynamic
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Category Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prd in Model)
+        {
+        <tr>
+            <th scope="row">@prd.PrdId</th>
+            <td>@prd.CategoryId</td>
+            <td>@prd.PrdName</td>
+            <td>@prd.PrdPrice</td>
+            <td>@prd.PrdQuantity</td>
+        </tr>
+        }
+    </tbody>
+</table>
 
-<div>
-    <h4>product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CategoryId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CategoryId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PrdName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrdName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PrdQuantity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrdQuantity)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PrdPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrdPrice)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PrdId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
