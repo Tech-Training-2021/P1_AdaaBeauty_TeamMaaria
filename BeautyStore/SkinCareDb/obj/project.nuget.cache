@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OrMSCXsp0Hqb2Gv9zU3C1fq26SGL8tXm8fTDN5uL7JuXp3CHij4ZLcuOVMnMFJbm72noIWn1z8cyzIt6FsBmfg==",
+  "dgSpecHash": "T2yJS87xqkXirq7YEOyqyrxTNAJr2XK1Ql5so3wHlydgyxFXu2FMfG2ljcDau8/GApF2S+p2MSKjPRD7bvo8Ow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maaria Khan\\myproj\\P0-AdaaBeauty-MaariaKhan\\BeautyStore\\SkinCareDb\\SkinCareDb.csproj",
+  "projectFilePath": "C:\\Users\\Maaria Khan\\newproj\\P1_AdaaBeauty_TeamMaaria\\BeautyStore\\SkinCareDb\\SkinCareDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maaria Khan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Maaria Khan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

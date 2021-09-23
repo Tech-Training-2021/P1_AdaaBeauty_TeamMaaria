@@ -1,0 +1,59 @@
+﻿@using AdaaBeauuty.Models
+@model RegisterCombined
+@{
+    ViewBag.Title = "Registered Users";
+}
+
+<h2>AdaaBeauty Users</h2>
+
+<h4>@Html.ActionLink("Add new Adaa User", "MyForm")</h4>
+<h4>@Html.ActionLink("Edit Adaa User", "Edit")</h4>
+<h4>@Html.ActionLink("Edit Adaa User Location Details", "EditLoc")</h4>
+
+
+<h3>User Details</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Registration Password</th>
+            <th>Registration Contact</th>
+            <th>Email Id</th>
+            <th>User Location</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var r in Model.Registers)
+        {
+            foreach (var l in Model.RegLocs)
+            {
+                if (r.RegisterId == l.RegisterId && r.RegisterId % 2 == 0)
+                {
+                    <tr class="even">
+                        <td>@r.UserName</td>
+                        <td>@r.RegisterPwd</td>
+                        <td>@r.RegisterContact</td>
+                        <td>@l.EmailId</td>
+                        <td>@l.UserLocation</td>
+                    </tr>
+                }
+                else if (r.RegisterId == l.RegisterId && r.RegisterId % 2 == 1)
+                {
+                    <tr class="odd">
+                        <td>@r.UserName</td>
+                        <td>@r.RegisterPwd</td>
+                        <td>@r.RegisterContact</td>
+                        <td>@l.EmailId</td>
+                        <td>@l.UserLocation</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+
+
+
