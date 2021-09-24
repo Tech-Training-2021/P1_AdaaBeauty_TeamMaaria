@@ -141,9 +141,10 @@ namespace AdaaBeauuty.Controllers
 
         }
 
-       
+
 
         //getcartdetails
+        [Authorize]
         public ActionResult GetCart()
         {
             int regid=(int)Session["regid"];
@@ -214,6 +215,7 @@ namespace AdaaBeauuty.Controllers
 
 
         //gethistorycartdetails
+        [Authorize]
         public ActionResult GetHistoryCart()
         {
             int regid = (int)Session["regid"];
@@ -256,7 +258,17 @@ namespace AdaaBeauuty.Controllers
 
         }
 
-
+        //getadmincart
+        public ActionResult GetAdminCart()
+        {
+            var cart=repo.GetCart();
+            var data = new List<AdaaBeauuty.Models.Cart>();
+            foreach(var c in cart)
+            {
+                data.Add(Mapper.MapAdminCart(c));
+            }
+            return View(data);
+        }
 
 
 

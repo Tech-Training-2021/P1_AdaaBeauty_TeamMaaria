@@ -30,6 +30,17 @@ namespace AdaaBeauuty.Models
                 PrdQuantity=cart.PrdQuantity,
             };
         }
+
+        public static AdaaBeauuty.Models.Cart MapAdminCart(Data.Entities.customercart cart)
+        {
+            return new AdaaBeauuty.Models.Cart()
+            {
+                CartId = cart.CartId,
+                RegisterId = cart.RegisterId,
+                PrdId = cart.PrdId,
+                PrdQuantity = cart.PrdQuantity,
+            };
+        }
         public static AdaaBeauuty.Models.CartView MapCart1(Data.Entities.customercart cart,string prdname,decimal? prdprice)
         {
             return new AdaaBeauuty.Models.CartView()

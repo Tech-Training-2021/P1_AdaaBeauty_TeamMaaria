@@ -169,6 +169,7 @@
     <Content Include="fonts\1.PNG" />
     <Content Include="fonts\2.PNG" />
     <Content Include="fonts\3.PNG" />
+    <Content Include="fonts\adminmodel.jpeg" />
     <Content Include="fonts\cleanse1.png" />
     <Content Include="fonts\forestessential.jpeg" />
     <Content Include="fonts\forgotpwd.jpg" />
@@ -253,6 +254,7 @@
     <Content Include="Views\Adaa\GetHistoryCart.cshtml" />
     <Content Include="Views\Register\MyAdmin.cshtml" />
     <Content Include="Views\Adaa\SkinCare.cshtml" />
+    <Content Include="Views\Adaa\GetAdminCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

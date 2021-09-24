@@ -1,0 +1,44 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "GetAdminCart";
+}
+
+<h2>Customer Orders To Be Delivered</h2>
+
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Register Id</th>
+            <th>Product Id</th>
+            <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cart in Model)
+        {
+            if (@cart.CartId % 2 == 0)
+            {
+                <tr class="even">
+                    <th scope="row">@cart.CartId</th>
+                    <td>@cart.RegisterId</td>
+                    <td>@cart.PrdId</td>
+                    <td>@cart.PrdQuantity</td>
+                </tr>
+            }
+            else
+            {
+                <tr class="odd">
+                    <th scope="row">@cart.CartId</th>
+                    <td>@cart.RegisterId</td>
+                    <td>@cart.PrdId</td>
+                    <td>@cart.PrdQuantity</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+
+
